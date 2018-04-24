@@ -1,2 +1,8 @@
 tutoring_site/tutoring_site/secret.py
 tutoring_site/tutoring_site/__pycache__/secret.cpython-35.pyc
+tutoring_site/db.sqlite3
+tutoring_site/tutoring_site/__pycache__/__init__.cpython-35.pyc
+tutoring_site/tutoring_site/__pycache__/settings.cpython-35.pyc
+tutoring_site/tutoring_site/__pycache__/urls.cpython-35.pyc
+tutoring_site/tutoring_site/__pycache__/wsgi.cpython-35.pyc
+tutoring_site/tutoring_site/__pycache__/views.cpython-35.pyc
