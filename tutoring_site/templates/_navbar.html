@@ -1,31 +1,100 @@
+{% load static %} {% load staticfiles %}
 <nav role="navigation">
     <div class="nav-wrapper container">
-        <a href="#" class="brand-logo">My Social Site</a>
-        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <a href="#" class="brand-logo">
+            {% comment %} change the size of the image
+            <div class="container">
+                <img class="responsive-img" src="{% static 'img\logo.png' %}" alt="Image of Online Caribbean Education Logo" />
+            </div>
+            {% endcomment %} Online Caribbean Education
+        </a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse">
+            <i class="material-icons">menu</i>
+        </a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li>
+                <a href="#">Find Tutor</a>
+            </li>
+            <li>
+                <a href="#">Apply</a>
+            </li>
+            <li>
+                <a href="#">About</a>
+            </li>
+            <li>
+                <a href="#">Contact</a>
+            </li>
             {% if user.is_authenticated %}
-            <li><a href="#">Post</a></li>
-            <li><a href="#">Groups</a></li>
-            <li><a href="#">Create Group</a></li>
-            <li><a href="#">Logout</a></li>
+            <ul id="dropdown1" class="dropdown-content">
+                    <li>
+                        <a href="#!">Profile</a>
+                    </li>
+                    <li>
+                        <a href="#!">Messages</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="#!">Logout</a>
+                    </li>
+                </ul>
+                <li>
+                    <a materialize="dropdown" class='dropdown-button' href='#' data-activates='dropdown1'>
+                        {{user.username}}
+                        <i class="material-icons right">arrow_drop_down</i>
+                    </a>
+                </li>
             {% else %}
-            <li><a href="#">Groups</a></li>
-            <li><a href="#">Login</a></li>
-            <li><a href="#">Sign Up</a></li>
+            <li>
+                <a href="#">Login</a>
+            </li>
+            <li>
+                <a href="#">Sign Up</a>
+            </li>
             {% endif %}
         </ul>
         <ul class="side-nav" id="mobile-demo">
+            <li>
+                <a href="#">Find Tutor</a>
+            </li>
+            <li>
+                <a href="#">Apply</a>
+            </li>
+            <li>
+                <a href="#">About</a>
+            </li>
+            <li>
+                <a href="#">Contact</a>
+            </li>
             {% if user.is_authenticated %}
-            <li><a href="#">Post</a></li>
-            <li><a href="#">Groups</a></li>
-            <li><a href="#">Create Group</a></li>
-            <li><a href="#">Logout</a></li>
+            <ul id="dropdown2" class="dropdown-content">
+                <li>
+                    <a href="#!">Profile</a>
+                </li>
+                <li>
+                    <a href="#!">Messages</a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a href="#!">Logout</a>
+                </li>
+            </ul>
+            <li>
+                <a materialize="dropdown" class='dropdown-button' href='#' data-activates='dropdown2'>
+                    {{user.username}}
+                    <i class="material-icons right">arrow_drop_down</i>
+                </a>
+            </li>
             {% else %}
-            <li><a href="#">Groups</a></li>
-            <li><a href="#">Login</a></li>
-            <li><a href="#">Sign Up</a></li>
+            <li>
+                <a href="#">Login</a>
+            </li>
+            <li>
+                <a href="#">Sign Up</a>
+            </li>
             {% endif %}
         </ul>
+        <!-- Dropdown Trigger -->
+
 
     </div>
 </nav>
