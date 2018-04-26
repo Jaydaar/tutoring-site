@@ -6,91 +6,96 @@
         </div>
     </div>
 </div>
-<div class="divider"></div>
-<div class="row section">
-    <div class="col s10 offset-s1">
-        <div class="card horizontal">
-            <div class="card-content s8">
-                <h2 class="card-title">Find a Tutor</h2>
-                <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in neque rutrum, pharetra turpis et, congue turpis. Proin sollicitudin
-                        imperdiet mollis. Fusce congue tellus dolor, faucibus viverra elit ultricies non. In quis nisi vel felis egestas
-                        dictum. Cras metus neque, iaculis ornare viverra vel, consectetur sed augue. 
-                </p>
-                <a class="waves-effect waves-light btn-large">Search</a>
+<div class="row">
+    <div class="col s5 offset-s1">
+        <div class="card medium">
+            <div class="card-image">
+                <img src="http://via.placeholder.com/400x400">
             </div>
-            <div class="card-image s4">
-                <img class="responsive-img"  src="http://via.placeholder.com/450x450">
+            <div class="card-content">
+                <span class="card-title">Find a Tutor</span>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in neque rutrum, pharetra turpis et, congue turpis. Proin sollicitudin
+                    imperdiet mollis. Fusce congue tellus dolor, faucibus viverra elit ultricies non. In quis nisi vel felis
+                    egestas dictum. Cras metus neque, iaculis ornare viverra vel, consectetur sed augue. Nam vestibulum leo
+                    fringilla, egestas massa sit amet, ultrices leo. Nam vitae bibendum justo. Ut quis augue efficitur augue
+                    ornare ornare sit amet vitae purus. Mauris congue posuere congue. Donec dignissim erat non lacus suscipit
+                    sagittis. Curabitur in gravida ex.
+                </p>
+            </div>
+            <div class="card-action">
+                <a class="button" href="#">Search</a>
+            </div>
+        </div>
+    </div>
+    <div class="col s5">
+        <div class="card medium">
+            <div class="card-image">
+                <img src="http://via.placeholder.com/400x400">
+            </div>
+            <div class="card-content">
+                <span class="card-title">Become a Tutor</span>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in neque rutrum, pharetra turpis et, congue turpis. Proin sollicitudin
+                    imperdiet mollis. Fusce congue tellus dolor, faucibus viverra elit ultricies non. In quis nisi vel felis
+                    egestas dictum. Cras metus neque, iaculis ornare viverra vel, consectetur sed augue. Nam vestibulum leo
+                    fringilla, egestas massa sit amet, ultrices leo. Nam vitae bibendum justo. Ut quis augue efficitur augue
+                    ornare ornare sit amet vitae purus. Mauris congue posuere congue. Donec dignissim erat non lacus suscipit
+                    sagittis. Curabitur in gravida ex.
+                </p>
+            </div>
+            <div class="card-action">
+                {% if user.is_authenticated %}
+                <a class="button" href="#">Activate Profile</a>
+                {% else %}
+                <a class="button" href="#">Sign Up</a>
+                {% endif %}
             </div>
         </div>
     </div>
 </div>
-<div class="divider"></div>
-<div class="row section">
-    <div class="col s4">
-        <a href="https://placeholder.com">
-            <img class="responsive-img" src="http://via.placeholder.com/450x450">
-        </a>
-    </div>
-    <div class="col s8">
-        {% comment %} try to adjust this information for users who are logged in and those who are not {% endcomment %}
-        <h2 class="right-align"> Become a Tutor </h2>
-        <p class="right-align">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in neque rutrum, pharetra turpis et, congue turpis. Proin sollicitudin
-            imperdiet mollis. Fusce congue tellus dolor, faucibus viverra elit ultricies non. In quis nisi vel felis egestas
-            dictum. Cras metus neque, iaculis ornare viverra vel, consectetur sed augue. Nam vestibulum leo fringilla, egestas
-            massa sit amet, ultrices leo. Nam vitae bibendum justo. Ut quis augue efficitur augue ornare ornare sit amet
-            vitae purus. Mauris congue posuere congue. Donec dignissim erat non lacus suscipit sagittis. Curabitur in gravida
-            ex.
-        </p>
-        {% if user.is_authenticated %}
-        <a class="waves-effect waves-light btn-large col s2 offset-s4">Become Tutor</a>
-        {% else %}
-        <a class="waves-effect waves-light btn-large col s2 offset-s4">Sign Up</a>
-        {% endif %}
+<div class="row">
+    <div class="col s10 offset-s1">
+        <div class="card horizontal medium">
+            <div class="card-content col s8">
+                <div class="card-title">
+                    <h2>About</h2>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in neque rutrum, pharetra turpis et, congue turpis.
+                    Proin sollicitudin imperdiet mollis. Fusce congue tellus dolor, faucibus viverra elit ultricies non.
+                    In quis nisi vel felis egestas dictum. Cras metus neque, iaculis ornare viverra vel, consectetur sed
+                    augue. Nam vestibulum leo fringilla, egestas massa sit amet, ultrices leo. Nam vitae bibendum justo.
+                    Ut quis augue efficitur augue ornare ornare sit amet vitae purus. Mauris congue posuere congue. Donec
+                    dignissim erat non lacus suscipit sagittis. Curabitur in gravida ex.
+                </p>
+            </div>
+            <div class="card-image responsive-img col s4">
+                <img src="http://via.placeholder.com/400x400">
+            </div>
+        </div>
     </div>
 </div>
-<div class="divider"></div>
-<div class="row section">
-    <div class="col s6">
-        <h2 id="about"> About </h2>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in neque rutrum, pharetra turpis et, congue turpis. Proin sollicitudin
-            imperdiet mollis. Fusce congue tellus dolor, faucibus viverra elit ultricies non. In quis nisi vel felis egestas
-            dictum. Cras metus neque, iaculis ornare viverra vel, consectetur sed augue. Nam vestibulum leo fringilla, egestas
-            massa sit amet, ultrices leo. Nam vitae bibendum justo. Ut quis augue efficitur augue ornare ornare sit amet
-            vitae purus. Mauris congue posuere congue. Donec dignissim erat non lacus suscipit sagittis. Curabitur in gravida
-            ex.
-        </p>
-    </div>
-    <div class="col s6">
-        <a href="https://placeholder.com">
-            <img class="responsive-img" src="http://via.placeholder.com/450x450">
-        </a>
-    </div>
-</div>
-<div class="divider"></div>
-<div id="contact" class="row section">
-    {% comment %} Place the contact me for here with location information {% endcomment %}
-    <div class="col s6">
-        <a href="https://placeholder.com">
-            <img class="responsive-img" src="http://via.placeholder.com/450x450">
-        </a>
-        <a class="waves-effect waves-light btn-large col s2 offset-s4">Submit</a>
-    </div>
-    <div class="col s6">
-        {% comment %} try to adjust this information for users who are logged in and those who are not {% endcomment %}
-        <h2 class="right-align"> Contact </h2>
-        <p class="right-align">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in neque rutrum, pharetra turpis et, congue turpis. Proin sollicitudin
-            imperdiet mollis. Fusce congue tellus dolor, faucibus viverra elit ultricies non. In quis nisi vel felis egestas
-            dictum. Cras metus neque, iaculis ornare viverra vel, consectetur sed augue. Nam vestibulum leo fringilla, egestas
-            massa sit amet, ultrices leo. Nam vitae bibendum justo. Ut quis augue efficitur augue ornare ornare sit amet
-            vitae purus. Mauris congue posuere congue. Donec dignissim erat non lacus suscipit sagittis. Curabitur in gravida
-            ex.
-        </p>
-    </div>
-</div>
+<div class="row">
+    <div class="col s10 offset-s1">
+        <div class="card horizontal medium">
+            <div class="card-content col s8">
+                <div class="card-title">
+                    <h2>Contact</h2>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in neque rutrum, pharetra turpis et, congue turpis.
+                    Proin sollicitudin imperdiet mollis. Fusce congue tellus dolor, faucibus viverra elit ultricies non.
+                    In quis nisi vel felis egestas dictum. Cras metus neque, iaculis ornare viverra vel, consectetur sed
+                    augue. Nam vestibulum leo fringilla, egestas massa sit amet, ultrices leo. Nam vitae bibendum justo.
+                    Ut quis augue efficitur augue ornare ornare sit amet vitae purus. Mauris congue posuere congue. Donec
+                    dignissim erat non lacus suscipit sagittis. Curabitur in gravida ex.
+                </p>
+            </div>
+            <div class="card-action"><a id="contact" >Submit</a></div>
+            <div class="card-image responsive-img col s4">
+                <img src="http://via.placeholder.com/400x400">
+            </div>
 
-
+        </div>
+    </div>
+</div>
 {% endblock content %}
