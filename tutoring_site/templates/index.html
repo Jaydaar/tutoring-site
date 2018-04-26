@@ -24,7 +24,7 @@
                 </p>
             </div>
             <div class="card-action">
-                <a class="button" href="#">Search</a>
+                <a class="button btn" href="#">Search</a>
             </div>
         </div>
     </div>
@@ -44,11 +44,12 @@
                     sagittis. Curabitur in gravida ex.
                 </p>
             </div>
+            {% comment %} Change the logout to the profile when it is fixed {% endcomment %}
             <div class="card-action">
                 {% if user.is_authenticated %}
-                <a class="button" href="#">Activate Profile</a>
+                <a class="button btn" href="{% url 'account_logout' %}">Activate Profile</a>
                 {% else %}
-                <a class="button" href="#">Sign Up</a>
+                <a class="button btn" href="{% url 'account_signup' %}">Sign Up</a>
                 {% endif %}
             </div>
         </div>
@@ -59,7 +60,7 @@
         <div class="card horizontal medium">
             <div class="card-content col s8">
                 <div class="card-title">
-                    <h2>About</h2>
+                    <h2 id="about">About</h2>
                 </div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in neque rutrum, pharetra turpis et, congue turpis.
                     Proin sollicitudin imperdiet mollis. Fusce congue tellus dolor, faucibus viverra elit ultricies non.
@@ -80,7 +81,7 @@
         <div class="card horizontal medium">
             <div class="card-content col s8">
                 <div class="card-title">
-                    <h2>Contact</h2>
+                    <h2 id="contact">Contact</h2>
                 </div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in neque rutrum, pharetra turpis et, congue turpis.
                     Proin sollicitudin imperdiet mollis. Fusce congue tellus dolor, faucibus viverra elit ultricies non.
@@ -90,7 +91,7 @@
                     dignissim erat non lacus suscipit sagittis. Curabitur in gravida ex.
                 </p>
             </div>
-            <div class="card-action"><a id="contact" >Submit</a></div>
+            <div class="card-action"><a id="contact" class="btn" >Submit</a></div>
             <div class="card-image responsive-img col s4">
                 <img src="http://via.placeholder.com/400x400">
             </div>
