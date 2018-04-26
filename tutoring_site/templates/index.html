@@ -1,8 +1,96 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} {% block content %}
+<div class="row section">
+    <div class="col s10 offset-s1">
+        <div class="video-container responsive-video">
+            <iframe src="https://www.youtube.com/embed/KMdZL4gWIJU" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+<div class="divider"></div>
+<div class="row section">
+    <div class="col s10 offset-s1">
+        <div class="card horizontal">
+            <div class="card-content s8">
+                <h2 class="card-title">Find a Tutor</h2>
+                <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in neque rutrum, pharetra turpis et, congue turpis. Proin sollicitudin
+                        imperdiet mollis. Fusce congue tellus dolor, faucibus viverra elit ultricies non. In quis nisi vel felis egestas
+                        dictum. Cras metus neque, iaculis ornare viverra vel, consectetur sed augue. 
+                </p>
+                <a class="waves-effect waves-light btn-large">Search</a>
+            </div>
+            <div class="card-image s4">
+                <img class="responsive-img"  src="http://via.placeholder.com/450x450">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="divider"></div>
+<div class="row section">
+    <div class="col s4">
+        <a href="https://placeholder.com">
+            <img class="responsive-img" src="http://via.placeholder.com/450x450">
+        </a>
+    </div>
+    <div class="col s8">
+        {% comment %} try to adjust this information for users who are logged in and those who are not {% endcomment %}
+        <h2 class="right-align"> Become a Tutor </h2>
+        <p class="right-align">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in neque rutrum, pharetra turpis et, congue turpis. Proin sollicitudin
+            imperdiet mollis. Fusce congue tellus dolor, faucibus viverra elit ultricies non. In quis nisi vel felis egestas
+            dictum. Cras metus neque, iaculis ornare viverra vel, consectetur sed augue. Nam vestibulum leo fringilla, egestas
+            massa sit amet, ultrices leo. Nam vitae bibendum justo. Ut quis augue efficitur augue ornare ornare sit amet
+            vitae purus. Mauris congue posuere congue. Donec dignissim erat non lacus suscipit sagittis. Curabitur in gravida
+            ex.
+        </p>
+        {% if user.is_authenticated %}
+        <a class="waves-effect waves-light btn-large col s2 offset-s4">Become Tutor</a>
+        {% else %}
+        <a class="waves-effect waves-light btn-large col s2 offset-s4">Sign Up</a>
+        {% endif %}
+    </div>
+</div>
+<div class="divider"></div>
+<div class="row section">
+    <div class="col s6">
+        <h2 id="about"> About </h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in neque rutrum, pharetra turpis et, congue turpis. Proin sollicitudin
+            imperdiet mollis. Fusce congue tellus dolor, faucibus viverra elit ultricies non. In quis nisi vel felis egestas
+            dictum. Cras metus neque, iaculis ornare viverra vel, consectetur sed augue. Nam vestibulum leo fringilla, egestas
+            massa sit amet, ultrices leo. Nam vitae bibendum justo. Ut quis augue efficitur augue ornare ornare sit amet
+            vitae purus. Mauris congue posuere congue. Donec dignissim erat non lacus suscipit sagittis. Curabitur in gravida
+            ex.
+        </p>
+    </div>
+    <div class="col s6">
+        <a href="https://placeholder.com">
+            <img class="responsive-img" src="http://via.placeholder.com/450x450">
+        </a>
+    </div>
+</div>
+<div class="divider"></div>
+<div id="contact" class="row section">
+    {% comment %} Place the contact me for here with location information {% endcomment %}
+    <div class="col s6">
+        <a href="https://placeholder.com">
+            <img class="responsive-img" src="http://via.placeholder.com/450x450">
+        </a>
+        <a class="waves-effect waves-light btn-large col s2 offset-s4">Submit</a>
+    </div>
+    <div class="col s6">
+        {% comment %} try to adjust this information for users who are logged in and those who are not {% endcomment %}
+        <h2 class="right-align"> Contact </h2>
+        <p class="right-align">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in neque rutrum, pharetra turpis et, congue turpis. Proin sollicitudin
+            imperdiet mollis. Fusce congue tellus dolor, faucibus viverra elit ultricies non. In quis nisi vel felis egestas
+            dictum. Cras metus neque, iaculis ornare viverra vel, consectetur sed augue. Nam vestibulum leo fringilla, egestas
+            massa sit amet, ultrices leo. Nam vitae bibendum justo. Ut quis augue efficitur augue ornare ornare sit amet
+            vitae purus. Mauris congue posuere congue. Donec dignissim erat non lacus suscipit sagittis. Curabitur in gravida
+            ex.
+        </p>
+    </div>
+</div>
 
 
-{% block content %}
-
-<h1>Welcome to my social site.</h1>
-    
 {% endblock content %}
