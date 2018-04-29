@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+{% block formheader %}
+<div class="row">
+    <div class="col s10 offset-s1">
+        <h1 class="header">{% block head %} {% endblock head %}</h1>
+        {% endblock formheader %} {% block formcontent %}
+        <div class="card">
+            <div class="card-stack">
+                <div class="card-content">
+
+{% block info %}
+    
+{% endblock info %}
+    
+                    {% endblock formcontent %}
+                    {% block formaction %}
+                    <div class="card-action">
+                            {% block act %}
+                            {% endblock act %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock formaction %}
+{% endblock %}
