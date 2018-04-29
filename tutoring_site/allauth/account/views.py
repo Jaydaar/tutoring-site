@@ -260,7 +260,6 @@ class SignupView(RedirectAuthenticatedUserMixin, CloseableSignupMixin,
 
 signup = SignupView.as_view()
 
-
 class ConfirmEmailView(TemplateResponseMixin, View):
 
     template_name = "account/email_confirm." + app_settings.TEMPLATE_EXTENSION

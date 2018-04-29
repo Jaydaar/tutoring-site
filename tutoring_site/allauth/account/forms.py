@@ -266,6 +266,7 @@ class BaseSignupForm(_base_signup_form_class()):
     email = forms.EmailField(widget=forms.TextInput(
         attrs={'type': 'email',
                'placeholder': _('E-mail address')}))
+    is_tutor = forms.BooleanField(label=_("Use as a tutor"), initial=False)
 
     def __init__(self, *args, **kwargs):
         email_required = kwargs.pop('email_required',
@@ -281,11 +282,11 @@ class BaseSignupForm(_base_signup_form_class()):
             username_field.max_length)
 
         default_field_order = [
+            'username',
             'email',
             'email2',  # ignored when not present
-            'username',
             'password1',
-            'password2'  # ignored when not present
+            'password2',  # ignored when not present
         ]
         if app_settings.SIGNUP_EMAIL_ENTER_TWICE:
             self.fields["email2"] = forms.EmailField(

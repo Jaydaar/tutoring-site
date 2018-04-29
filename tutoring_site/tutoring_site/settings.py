@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     # 'allauth.socialaccount.providers.facebook',
     # 'allauth.socialaccount.providers.google',
     # 'allauth.socialaccount.providers.linkedin',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
@@ -145,3 +146,5 @@ LOGIN_REDIRECT_URL = '/'
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 1
+ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
