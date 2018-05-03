@@ -47,6 +47,9 @@ INSTALLED_APPS = [
     # 'allauth.socialaccount.providers.google',
     # 'allauth.socialaccount.providers.linkedin',
     'widget_tweaks',
+    'anymail',
+    # Custom Apps
+    'tutor',
 ]
 
 MIDDLEWARE = [
@@ -145,6 +148,15 @@ LOGIN_REDIRECT_URL = '/'
 
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = "anymail.backends.mailgun.EmailBackend"
 ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 1
 ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
+
+# Mailgun settings
+ANYMAIL = {
+    # (exact settings here depend on your ESP...)
+    "MAILGUN_API_KEY": "key-b27b5cab57d24935286be902fe093591",
+    "MAILGUN_SENDER_DOMAIN": 'sandbox69fac95d8bbb4800ac9fe3cde2c60407.mailgun.org',  # your Mailgun domain, if needed
+}
+
+DEFAULT_FROM_EMAIL = "kevinoudai@yahoo.com"  # if you don't already have this in settings
